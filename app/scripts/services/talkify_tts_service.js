@@ -3,10 +3,10 @@
 
     /**
      * @ngdoc service
-     * @name talkifyExampleModule.service:talkify
+     * @name talkifyExampleModule.service:talkifyTts
      *
      * @description
-     * Description of the service talkify
+     * Description of the service talkifyTts
      *
      * @example
        <example module="talkifyExampleModule">
@@ -18,17 +18,17 @@
            <file name="script.js">
                angular
                    .module('talkifyExampleModule', [])
-                   .controller('SampleCtrl', [''talkify], function (talkify) {
-                        this.value = 'Hello factory ' + talkify.name;
+                   .controller('SampleCtrl', ['talkifyTts'], function (talkifyTts) {
+                        this.value = 'Hello factory ' + talkifyTts.name;
                    }]);
            </file>
        </example>
      */
     angular
         .module('talkifyExampleModule')
-        .service('talkify', function() {
+        .service('talkifyTts', function() {
             // AngularJS will instantiate a singleton by calling "new" on this function
-            this.name = 'talkifyService';
+            this.name = 'talkifyTtsService';
         });
 
 })();
