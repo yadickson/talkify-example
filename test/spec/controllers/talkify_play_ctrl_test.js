@@ -10,18 +10,26 @@
             var controller,
                 scope;
 
+            var mockTalkifyTts = {
+                play: sinon.spy()
+            };
+
             // Initialize the controller and a mock scope
             beforeEach(inject(function($controller, $rootScope) {
                 scope = $rootScope.$new();
                 controller = $controller('TalkifyPlayCtrl', {
-                    $scope: scope
-                        // place here mocked dependencies
+                    $scope: scope,
+                    talkifyTts: mockTalkifyTts
                 });
             }));
 
-            it('should attach a list of awesomeThings to the scope', function() {
-                expect(controller.awesomeThings).to.be.an('array');
-                expect(controller.awesomeThings).to.have.lengthOf(3);
+            it('should runTalk is present', function() {
+                expect(controller.runTalk).to.be.function;
+            });
+
+            it('check play method is call to runTalk function', function() {
+                controller.runTalk();
+                expect(mockTalkifyTts.play.called).to.be.true;
             });
         });
     });

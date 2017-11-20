@@ -3,7 +3,7 @@ module.exports = function(config) {
 
         basePath: '',
         // frameworks to use
-        frameworks: ['browserify', 'mocha', 'chai'],
+        frameworks: ['browserify', 'mocha', 'chai', 'sinon'],
 
         // list of files / patterns to load in the browser
 
@@ -16,10 +16,12 @@ module.exports = function(config) {
             "app/scripts/main.js",
             "app/scripts/controllers/home_ctrl.js",
             "app/scripts/controllers/talkify_play_ctrl.js",
+            "app/scripts/services/talkify_enable_const.js",
             "app/scripts/services/talkify_key_const.js",
             "app/scripts/services/talkify_tts_service.js",
             "app/scripts/services/talkify_url_const.js",
             "test/spec/main_test.js",
+            "test/spec/services/talkify_enable_const_test.js",
             "test/spec/services/talkify_key_const_test.js",
             "test/spec/services/talkify_url_const_test.js",
             "test/spec/services/talkify_tts_service_test.js",

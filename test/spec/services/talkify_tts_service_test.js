@@ -7,19 +7,21 @@
               // load the module
               beforeEach(angular.mock.module('talkifyExampleModule'));
 
-              var talkifyTtsService;
               // Initialize the service
-              beforeEach(inject(function(_talkifyTts_) {
-                  talkifyTtsService = _talkifyTts_;
+              beforeEach(function() {
+
+                  angular.mock.module(function($provide) {
+                      $provide.value('talkifyKey', 'key');
+                      $provide.value('talkifyUrl', 'url');
+                      $provide.value('talkifyEnable', false);
+                  });
+
+              });
+
+              it('Check service talkifyTts', inject(function(talkifyTts) {
+                  expect(!!talkifyTts).to.be.true;
               }));
 
-              it('Check service talkifyTts', function() {
-                  expect(!!talkifyTtsService).to.be.true;
-              });
-
-              it('Check talkifyTts.name', function() {
-                  expect(talkifyTtsService.name).to.be.equal('talkifyTtsService');
-              });
           });
       });
   })();

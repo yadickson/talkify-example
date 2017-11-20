@@ -26,28 +26,27 @@
      */
     angular
         .module('talkifyExampleModule')
-        .service('talkifyTts', ['talkifyUrl', 'talkifyKey', function(talkifyUrl, talkifyKey) {
-            this.name = 'talkifyTtsService';
+        .service('talkifyTts', ['talkifyUrl', 'talkifyKey', 'talkifyEnable', function(talkifyUrl, talkifyKey, talkifyEnable) {
 
             talkify.config.remoteService.host = talkifyUrl;
             talkify.config.remoteService.apiKey = talkifyKey;
 
             talkify.config.ui.audioControls = {
-                enabled: true,
+                enabled: talkifyEnable,
                 container: document.getElementById("talkify-play")
             };
 
-            var player = new talkify.TtsPlayer()
-                .enableTextHighlighting();
-
-            this.playlist = new talkify.playlist()
-                .begin()
-                .usingPlayer(player)
-                .withRootSelector('#root')
-                .build();
-
             this.play = function() {
-                this.playlist.play();
+
+                var player = new talkify.TtsPlayer()
+                    .enableTextHighlighting();
+
+                var playlist = new talkify.playlist()
+                    .begin()
+                    .usingPlayer(player)
+                    .withRootSelector('#root')
+                    .build()
+                    .play();
             };
 
         }]);

@@ -14,7 +14,7 @@
             }));
 
             it('Check value', function() {
-                expect(TALKIFY_URL_CONST).to.be.equal('TALKIFY_URL_CONST');
+                expect(TALKIFY_URL_CONST).to.be.equal('https://talkify.net');
             });
         });
     });
