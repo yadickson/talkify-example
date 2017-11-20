@@ -26,9 +26,31 @@
      */
     angular
         .module('talkifyExampleModule')
-        .service('talkifyTts', function() {
-            // AngularJS will instantiate a singleton by calling "new" on this function
+        .service('talkifyTts', ['talkifyUrl', 'talkifyKey', function(talkifyUrl, talkifyKey) {
             this.name = 'talkifyTtsService';
-        });
+
+            talkify.config.remoteService.host = talkifyUrl;
+            talkify.config.remoteService.apiKey = talkifyKey;
+
+            talkify.config.ui.audioControls = {
+                enabled: true,
+                container: document.getElementById("talkify-play")
+            };
+
+            var player = new talkify.TtsPlayer()
+                .enableTextHighlighting();
+
+            this.playlist = new talkify.playlist()
+                .begin()
+                .usingPlayer(player)
+                .withRootSelector('#root')
+                .withTextInteraction()
+                .build();
+
+            this.play = function() {
+                this.playlist.play();
+            };
+
+        }]);
 
 })();

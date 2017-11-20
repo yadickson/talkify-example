@@ -7,3 +7,21 @@ a {
         text-decoration: none;
     }
 }
+
+.talkify-audio-control-voice-wrapper {
+	display: none !important;
+}
+
+.talkify-audio-control {
+	background: none !important;
+	padding: 0 !important;
+	border-top: 0px !important;
+}
+
+.fa {
+	display: none !important;
+}
+
+.talkify-audio-control input[type="range"] {
+	display: none !important;
+}

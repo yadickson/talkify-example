@@ -37,6 +37,17 @@
                         }
                     }
                 })
+                .state('talkikyPlay', {
+                    parent: 'root',
+                    url: '/talkify-play',
+                    views: {
+                        'main@': {
+                            controller: 'TalkifyPlayCtrl',
+                            templateUrl: 'views/talkify_play.html',
+                            controllerAs: 'vm'
+                        }
+                    }
+                })
                 // endinject
             ;
 

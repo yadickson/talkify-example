@@ -15,10 +15,16 @@ module.exports = function(config) {
             "node_modules/talkify-tts/dist/talkify.js",
             "app/scripts/main.js",
             "app/scripts/controllers/home_ctrl.js",
+            "app/scripts/controllers/talkify_play_ctrl.js",
+            "app/scripts/services/talkify_key_const.js",
             "app/scripts/services/talkify_tts_service.js",
+            "app/scripts/services/talkify_url_const.js",
             "test/spec/main_test.js",
+            "test/spec/services/talkify_key_const_test.js",
+            "test/spec/services/talkify_url_const_test.js",
             "test/spec/services/talkify_tts_service_test.js",
-            "test/spec/controllers/home_ctrl_test.js"
+            "test/spec/controllers/home_ctrl_test.js",
+            "test/spec/controllers/talkify_play_ctrl_test.js"
             ],
 
         reporters: ['progress', 'mocha', 'junit', 'coverage'],
