@@ -6,7 +6,6 @@
 [![Coverage Status][coveralls-image]][coveralls-url]
 [![dependencies][dependencies-image]][dependencies-url]
 [![dev-dependencies][dev-dependencies-image]][dev-dependencies-url]
-[![Known Vulnerabilities][vulnerabilities-image]][vulnerabilities-url]
 
 ## Installation
 
@@ -47,7 +46,3 @@ GPL-3.0 © [Yadickson Soto](https://github.com/yadickson)
 
 [dev-dependencies-image]: https://david-dm.org/yadickson/talkify-example/dev-status.svg
 [dev-dependencies-url]: https://david-dm.org/yadickson/talkify-example?type=dev&view=list
-
-[vulnerabilities-image]: https://snyk.io/package/npm/talkify-example/badge.svg
-[vulnerabilities-url]: https://snyk.io/package/npm/talkify-example
-
