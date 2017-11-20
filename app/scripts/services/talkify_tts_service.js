@@ -44,7 +44,6 @@
                 .begin()
                 .usingPlayer(player)
                 .withRootSelector('#root')
-                .withTextInteraction()
                 .build();
 
             this.play = function() {

@@ -37,7 +37,7 @@
                         }
                     }
                 })
-                .state('talkikyPlay', {
+                .state('talkifyPlay', {
                     parent: 'root',
                     url: '/talkify-play',
                     views: {
