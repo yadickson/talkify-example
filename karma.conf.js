@@ -29,7 +29,7 @@ module.exports = function(config) {
             "test/spec/controllers/talkify_play_ctrl_test.js"
             ],
 
-        reporters: ['progress', 'mocha', 'junit', 'coverage'],
+        reporters: ['progress', 'mocha', 'junit', 'coverage', 'istanbul'],
 
         hostname: 'localhost',
 
@@ -49,6 +49,14 @@ module.exports = function(config) {
             dir: 'coverage',
             reporters: [{
                 type: 'html',
+                subdir: '.'
+            }]
+        },
+
+        istanbulReporter: {
+            dir : 'coverage',
+            reporters: [{
+                type: 'lcov',
                 subdir: '.'
             }]
         },
