@@ -7,33 +7,56 @@
 [![dependencies][dependencies-image]][dependencies-url]
 [![dev-dependencies][dev-dependencies-image]][dev-dependencies-url]
 
-## Run
 
-This application use gulp, angulaJS, bootstrap and html5
+This application use AngularJS, Bootstrap and Html5
 
-> Prebuild application
+## Prebuild application
 
 ```bash
 yarn install
 ```
 
-> Run application
-
+## Run application
 
 ```bash
 gulp serve
 ```
 
-> Test application
+```bash
+gulp serve:dist
+```
+
+## Test application
+
+```bash
+gulp test
+```
 
 ```bash
 gulp serve:test
 ```
 
+## Build application
+
+```bash
+gulp build
+```
+
+## Dist application
+
+```bash
+gulp dist
+```
+
+## Clean project
+
+```bash
+gulp clean
+```
 
 ## Thanks
 
- * Build application with [AngularJS Web](https://github.com/yadickson/generator-ajsweb).
+ * Build application with [AngularJS Web](https://github.com/yadickson/generator-ajsweb#readme).
 
 
 ## License
@@ -52,3 +75,4 @@ GPL-3.0 © [Yadickson Soto](https://github.com/yadickson)
 
 [dev-dependencies-image]: https://david-dm.org/yadickson/talkify-example/dev-status.svg
 [dev-dependencies-url]: https://david-dm.org/yadickson/talkify-example?type=dev&view=list
+

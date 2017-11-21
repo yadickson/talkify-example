@@ -1,4 +1,4 @@
-// generated on 2017-11-20 using generator-ajsweb 1.4.0
+// generated on 2017-11-21 using generator-ajsweb 1.4.9
 
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
